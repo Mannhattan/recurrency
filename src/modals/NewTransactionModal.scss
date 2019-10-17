@@ -1,0 +1,102 @@
+@import "./../Common.scss";
+
+div.new_transaction_wrapper {
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: rgba($color: #000000, $alpha: .7);
+    z-index: 10;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    div.container {
+        width: 500px;
+        height: auto;
+
+        background: #fff;
+        border-radius: 4px;
+        overflow: hidden;
+
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: flex-end;
+        align-items: flex-end;
+        
+        header.header_modal {
+            width: 100%;
+            height: 60px;
+
+            padding: 0 20px;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+
+            background: $color-main;
+
+            h1 {
+                font-family: $font-raleway;
+                font-size: 1.4em;
+                font-weight: 600;
+                color: #fff;
+            }
+
+            a.close {
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                
+                &:hover {
+                    transition: .2s ease-in-out;
+                    opacity: .5;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        p {
+            width: 100%;
+            padding: 20px 20px 7px 20px;
+
+            font-family: $font-raleway;
+            font-size: 1.2em;
+            font-weight: 400;
+            color: #000;
+        }
+
+        input[type=text] {
+            display: block;
+
+            width: calc(100% - 40px);
+            border: 1px solid $color-main;
+            border-radius: 3px;
+            padding: 5px 10px;
+
+            font-family: $font-noto;
+            font-size: 1em;
+            font-weight: 400;
+
+            margin: 0 20px;
+        }
+
+        a.button {
+            margin: 30px 20px 20px 20px;
+        }
+    }
+}

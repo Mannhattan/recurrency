@@ -1,0 +1,59 @@
+@import "./../Common.scss";
+
+div.transactions_summary_wrapper {
+    width: 32%;
+    height: 200px;
+
+    // margin: 0 20px;
+    padding: 30px;
+    
+    background: $color-main;
+    border-radius: 4px;
+
+    box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: .16);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    p {
+        width: 100%;
+        text-align: center;
+        font-family: $font-raleway;
+        font-size: 1em;
+        font-weight: 400;
+        // letter-spacing: 1px;
+        text-transform: uppercase;
+
+        color: #fff;
+    }
+
+    h1 {
+        width: 100%;
+        margin-top: 10px;
+        font-family: $font-noto;
+        font-size: 3em;
+        font-weight: 400;
+
+        color: #fff;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        svg {
+            height: 35px !important;
+            margin-left: 7px;
+        }
+
+        &.small {
+            font-size: 1.1em;
+        }
+    }
+}

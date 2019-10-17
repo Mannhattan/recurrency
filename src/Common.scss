@@ -1,0 +1,52 @@
+// @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Quicksand:300,400|Roboto:400,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=latin-ext');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700&display=swap&subset=latin-ext');
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap&subset=latin-ext');
+
+// $font-roboto: 'Roboto', sans-serif;
+$font-quicksand: 'Quicksand', sans-serif;
+$font-raleway: 'Raleway', sans-serif;
+$font-noto: 'Noto Sans', sans-serif;
+
+$color-main: #673AB7; //#3498db;//#16A085;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a.button {
+    display: block;
+
+    text-decoration: none;
+
+    padding: 12px 25px;
+
+    font-family: $font-quicksand;
+    font-size: 1.2em;
+    font-weight: 500;
+
+    background: $color-main;
+    border-radius: 4px;
+    border: 2px solid $color-main;
+
+    color: #fff;
+    transition: .2s ease-in-out;
+
+    &:hover {
+        transition: .2s ease-in-out;
+        background: transparent;
+        cursor: pointer;
+
+        color: $color-main;
+    }
+}
