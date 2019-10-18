@@ -26,12 +26,7 @@ class App extends Component {
             topTransactionToEur: 0,
             topTransactionToPln: 0,
             sumOfTransactions: 0,
-            transactions: [
-                {
-                    title: "this is some long ass shitty title",
-                    amountEur: 332
-                }
-            ],
+            transactions: [],
             isNewTransactionModalOpened: false
         }
     }
