@@ -26,7 +26,7 @@ div.transactions_summary_wrapper {
         font-size: 1em;
         font-weight: 400;
         // letter-spacing: 1px;
-        text-transform: uppercase;
+        // text-transform: uppercase;
 
         color: #fff;
     }
@@ -54,6 +54,7 @@ div.transactions_summary_wrapper {
 
         &.small {
             font-size: 1.1em;
+            margin-top: 5px;
         }
     }
 }
