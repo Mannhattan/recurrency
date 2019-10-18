@@ -18,7 +18,7 @@ class TransactionsList extends Component {
                                 <div className="transaction_item" key={id}>
                                     <div className="description">
                                         <i className="fas fa-exchange-alt"></i>
-                                        <h2>{transaction.title}</h2>
+                                        <h2 title={transaction.title}>{transaction.title}</h2>
                                     </div>
                                     
                                     <div className="currencies">

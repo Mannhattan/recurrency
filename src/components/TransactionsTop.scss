@@ -3,7 +3,7 @@
 div.top_transaction_wrapper {
     width: 32%;
     height: 200px;
-
+    // overflow: hidden;
     // margin: 0 20px;
 
     padding: 30px;
@@ -38,15 +38,13 @@ div.top_transaction_wrapper {
         font-family: $font-raleway;
         font-size: 1.7em;
         font-weight: 600;
+        
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         color: #fff;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
+        text-align: center;
 
         svg {
             height: 35px !important;

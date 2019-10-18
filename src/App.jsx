@@ -27,18 +27,7 @@ class App extends Component {
             topTransactionToPln: 0,
             sumOfTransactions: 0,
             transactions: [
-                // {
-                //     title: "TEST 1",
-                //     amountEur: 90
-                // },
-                // {
-                //     title: "TEST 2",
-                //     amountEur: 440
-                // },
-                // {
-                //     title: "TEST 3",
-                //     amountEur: 126
-                // }
+                
             ],
             isNewTransactionModalOpened: false
         }

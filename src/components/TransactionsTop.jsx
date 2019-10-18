@@ -12,7 +12,7 @@ class TransactionsTop extends Component {
                 {context => (
                     <div className="top_transaction_wrapper">
                         <p>Top transaction</p>
-                        <h1>{context.topTransactionTitle}</h1>
+                        <h1 title={context.topTransactionTitle}>{context.topTransactionTitle}</h1>
                         <h2>{context.topTransactionToEur} EUR <i className="fas fa-long-arrow-alt-right"></i> {context.topTransactionToPln} PLN</h2>
                     </div>
                 )}

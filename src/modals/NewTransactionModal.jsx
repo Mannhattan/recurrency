@@ -10,12 +10,28 @@ class NewTransactionModal extends Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            errorMessage: ""
+        }
     }
 
     createNewTransaction = () => {
-        if(this.transactionTitle.value != "" && this.transactionAmount.value != "")
-            if(/^(\d+(?:[\.\,]\d{0,5})?)$/.test(this.transactionAmount.value))
-                this.context.createTransaction(this.transactionTitle.value, Math.round(this.transactionAmount.value.replace(',', '.') * 100) / 100);
+        if(this.transactionTitle.value != "" && this.transactionAmount.value != "" && this.transactionTitle.value.replace(/\s/g, '').length) {
+            if(/^(\d+(?:[\.\,]\d{0,5})?)$/.test(this.transactionAmount.value.replace(/ /g,''))) {
+                this.context.createTransaction(this.transactionTitle.value, Math.round(this.transactionAmount.value.replace(',', '.').replace(/ /g,'') * 100) / 100);
+            }
+            else {
+                this.setState({
+                    errorMessage: "Amount only accepts decimal numbers!"
+                })
+            }
+        }
+        else {
+            this.setState({
+                errorMessage: "One or more fields are empty!"
+            })
+        }
     }
 
     render() {
@@ -31,6 +47,8 @@ class NewTransactionModal extends Component {
                     <input type="text" ref={(transactionTitle) => { this.transactionTitle = transactionTitle }}/>
                     <p>Amount (in Euro)</p>
                     <input type="text" ref={(transactionAmount) => { this.transactionAmount = transactionAmount }}/>
+
+                    {this.state.errorMessage != "" ? <p className="error_message">{this.state.errorMessage}</p> : null}
 
                     <a onClick={this.createNewTransaction} className="button">Create transaction</a>
                 </div>

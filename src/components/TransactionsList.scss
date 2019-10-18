@@ -50,6 +50,10 @@ section.transactions_wrapper {
             margin-bottom: 30px;
 
             div.description {
+                width: 50%;
+                height: auto;
+                overflow: hidden;
+                
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
@@ -67,11 +71,15 @@ section.transactions_wrapper {
                 }
 
                 h2 {
-                    // width: 100%;
+                    width: 100%;
                     // text-align: center;
                     font-family: $font-raleway;
                     font-size: 1.4em;
                     font-weight: 600;
+
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
 
                     // padding: 40px 0 10px 0;
                     // letter-spacing: 1px;

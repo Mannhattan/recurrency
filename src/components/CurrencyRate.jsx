@@ -12,14 +12,21 @@ class CurrencyRate extends Component {
         super(props);
 
         this.state = {
-            isEditing: false
+            isEditing: false,
+            isError: false
         }
     }
 
     saveCurrencyRate = () => {
-        if(/^[0-9]{1,5}([,.][0-9]{1,5})?$/.test(this.rateInput.value)) {
-            this.context.changeCurrencyRatio(this.rateInput.value.replace(',','.'));
-            this.setState({isEditing: false});
+        if(/^[0-9]{1,5}([,.][0-9]{1,2})?$/.test(this.rateInput.value.replace(/ /g,''))) {
+            this.context.changeCurrencyRatio(this.rateInput.value.replace(',','.').replace(/ /g,'').replace(/^0+/, '0'));
+            this.setState({isEditing: false,
+            isError: false});
+        }
+        else {
+            this.setState({
+                isError: true
+            })
         }
     }
     
@@ -30,7 +37,7 @@ class CurrencyRate extends Component {
                 <p className="rate">
                     1 EUR
                     <i className="fas fa-exchange-alt"></i>
-                    {this.state.isEditing ? <input type="text" defaultValue={this.context.eurToPlnRate} ref={(rateInput) => { this.rateInput = rateInput }}/> : this.context.eurToPlnRate+" "}
+                    {this.state.isEditing ? <input type="text" className={this.state.isError ? "error" : null} defaultValue={this.context.eurToPlnRate} ref={(rateInput) => { this.rateInput = rateInput }}/> : this.context.eurToPlnRate+" "}
                     PLN
                 </p>
 

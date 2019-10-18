@@ -58,10 +58,15 @@ div.currency_rate_wrapper {
 
                 margin-right: 6px;
 
-                padding: 3px 10px;
+                padding: 3px 7px;
                 border: none;
                 border-radius: 3px;
                 background: #fff;
+                border: 2px solid #fff;
+
+                &.error {
+                    border: 2px solid #ff0000;
+                }
             }
         }
     }
