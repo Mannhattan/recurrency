@@ -23,7 +23,7 @@ section.transactions_wrapper {
             font-size: 1.4em;
             font-weight: 600;
 
-            padding: 40px 0 10px 0;
+            padding: 20px 0 10px 0;
             // letter-spacing: 1px;
             // text-transform: uppercase;
     
@@ -48,6 +48,15 @@ section.transactions_wrapper {
             align-items: center;
 
             margin-bottom: 30px;
+
+            @media only screen and (max-width: 825px) {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-content: center;
+                align-items: center;
+            }
 
             div.description {
                 width: 50%;

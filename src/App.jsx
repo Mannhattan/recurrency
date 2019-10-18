@@ -27,7 +27,10 @@ class App extends Component {
             topTransactionToPln: 0,
             sumOfTransactions: 0,
             transactions: [
-                
+                {
+                    title: "this is some long ass shitty title",
+                    amountEur: 332
+                }
             ],
             isNewTransactionModalOpened: false
         }

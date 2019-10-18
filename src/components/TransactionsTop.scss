@@ -20,6 +20,10 @@ div.top_transaction_wrapper {
     align-content: center;
     align-items: center;
 
+    @media only screen and (max-width: 950px) {
+        width: 100%;
+    }
+
     p {
         width: 100%;
         text-align: center;
